@@ -9,7 +9,7 @@ public class BowlingGame
 	When the game is over, this method should return 11.*/
 	public int getCurrentFrame()
 	{
-		return 0;
+		return 1;
 	}
 
 	/*returns the current ball the player is on 
@@ -19,7 +19,7 @@ public class BowlingGame
 	 * (as noted above)..*/
 	public int getCurrentBall()
 	{
-		return 0;
+		return 2;
 	}
 
 	/*tells the BowlingGame that the bowler rolled a ball, 
