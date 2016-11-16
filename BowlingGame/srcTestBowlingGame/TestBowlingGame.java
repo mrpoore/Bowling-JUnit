@@ -6,18 +6,24 @@ public class TestBowlingGame {
 
 	
 	@Test
-	public void testStart()
-	{
+	public void testConstruction() {
 		BowlingGame g1 = new BowlingGame();
-		assertTrue("Frame and Ball are not 1",g1.getCurrentBall()==1&&g1.getCurrentFrame()==1);
+		assertTrue("The ball and frame are not 1", g1.getCurrentFrame()==1&&g1.getCurrentBall()==1);
 	}
 	
 	@Test
-	public void testAdvBall()
-	{
+	public void testAdvanceBall() {
 		BowlingGame g1 = new BowlingGame();
 		g1.scoreBall(4);
-		assertTrue("The ball didn't advance after the first score",g1.getCurrentBall()==2&&g1.getCurrentFrame()==1);
+		assertTrue("The ball didn't advance to ball 2", g1.getCurrentFrame()==1&&g1.getCurrentBall()==2);
+	}
+	
+	@Test
+	public void testAdvanceFrame() {
+		BowlingGame g1 = new BowlingGame();
+		g1.scoreBall(4);
+		g1.scoreBall(4);
+		assertTrue("The frame didn't advance to ball 2", g1.getCurrentFrame()==2&&g1.getCurrentBall()==1);
 	}
 	
 
